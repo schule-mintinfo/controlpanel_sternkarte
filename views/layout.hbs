@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>"Sternenkarte - Mint"</title>
+    <script src="/javascripts/jquery/jquery-3.4.1.js"></script>
+    <script src="/javascripts/bootstrap/bootstrap.js"></script>
+    <link rel='stylesheet' href='/stylesheets/bootstrap/bootstrap.min.css'/>
+    <style>
+
+        @font-face {
+            font-family: Titillium Web;
+            src: url('/font/titiliumweb/TitilliumWeb-Regular.ttf');
+            font-weight: normal;
+        }
+
+        body {
+            font-family: 'Titillium Web', sans-serif !important;
+            font-size: 21px;
+        }
+
+    </style>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <a class="navbar-brand" href="#">Sternkarte</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item {{#is active "index"}}active{{/is}}">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <!--<li class="nav-item {{#is active "1"}}active{{/is}}">
+                      <a class="nav-link" href="/2">1</a>
+                  </li>
+                  <li class="nav-item {{#is active "2"}}active{{/is}}">
+                      <a class="nav-link" href="/1">2</a>
+                  </li>-->
+        </ul>
+
+        <ul class="navbar-nav">
+            <li class="nav-item {{#is active "admin"}}active{{/is}}">
+                <a class="nav-link" href="/admin">Admin Code</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+{{{body}}}
+<nav class="navbar fixed-bottom navbar-light bg-primary">
+    <span class="text-left">© 2020 MINT</span><span class="text-right">v0.6</span>
+</nav>
+</body>
+</html>
