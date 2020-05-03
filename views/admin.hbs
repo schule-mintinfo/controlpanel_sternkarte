@@ -1,24 +1,7 @@
 <div class="container">
-    {{#if action}}
-        {{#is action "wc"}}
-            <div class="alert alert-primary" role="alert">
-                Der eingegebene Code war falsch.
-            </div>
-        {{else is action "shutdown"}}
-            <div class="alert alert-danger" role="alert">
-                Der PI fährt nun runter.
-            </div>
-        {{else is action "reboot"}}
-            <div class="alert alert-danger" role="alert">
-                Der PI restartet jetzt.
-            </div>
-        {{else is action "nothing lul"}}
-            <div class="alert alert-success" role="alert">
-                You have found it. The Easter Egg XD
-            </div>
-        {{/is}}
-
-    {{/if}}
+    <div class="alert {{ color }}" role="alert">
+        {{ action }}
+    </div>
     <form method="get">
         <label for="code">Code</label>
         <input type="text" class="form-control" id="code" name="code" placeholder="****">
